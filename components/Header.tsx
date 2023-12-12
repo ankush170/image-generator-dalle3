@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <header>
+    <header className="flex p-5 justify-between sticky top-0 bg-white z-50 shadow-md">
       {/* left */}
       <div className="flex space-x-2 items-center ">
         <Image
@@ -22,16 +22,16 @@ function Header() {
       </div>
 
       {/* right */}
-      <div>
+      <div className="flex text-xs md:text-base divide-x items-center">
         <Link
             href="https://www.linkedin.com/in/ankushmahanty/"
             className="px-2 font-light text-right"
         >
-            Reach out to me on LinkedIn!
+            Find me on <span className="text-blue-500">LinkedIn</span>!
         </Link>
         <Link
-            href=""
-            className="px-2 font-light"
+            href="https://github.com/ankush170/image-generator-dalle3"
+            className="px-2 font-light text-gray-500"
         >
             Github Repo
         </Link>
