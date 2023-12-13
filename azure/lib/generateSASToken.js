@@ -19,7 +19,7 @@ const sharedKeyCredential = new StorageSharedKeyCredential(
 const blobServiceClient = new BlobServiceClient(
     `https://${accountName}.blob.core.windows.net`,
     sharedKeyCredential
-)
+);
 
 async function generateSASToken () {
     const containerClient = blobServiceClient.getContainerClient(containerName);

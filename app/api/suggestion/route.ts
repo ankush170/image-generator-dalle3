@@ -6,7 +6,7 @@ export async function GET(request: Request){
 
 
     // This is to connect to our Microsoft Azure function endpoint
-    const response = await fetch('http://localhost:7071/api/getChatGPTSuggestion', {
+    const response = await fetch('http://127.0.0.1:7071/api/getChatGPTSuggestion', {
         cache: 'no-store' //every time we make a request, a new suggestion will be generated which is not cached to previous value
     })
 

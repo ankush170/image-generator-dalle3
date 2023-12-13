@@ -22,7 +22,7 @@ app.http('generateImage', {
             n: 1,
             size: "1024x1024",
           });
-        image_url = response.data.data[0].url;
+        image_url = response.data[0].url;
 
         const res = await axios.get(image_url, { responseType: 'arraybuffer'});
 
@@ -48,5 +48,7 @@ app.http('generateImage', {
         }catch (error){
             console.error("Error uploading file:", error.message);
         }
+
+        return { body: "Successfully Uploaded Image"}
     }
 })
